@@ -1,0 +1,93 @@
+@use 'sass:meta';
+$color1: var(--color-dark-byzantium);
+.product {
+    padding:4em 0;
+    .column {
+        padding:0 2rem;
+        @include media-breakpoint-up(lg){
+            padding:0 1.5rem;
+        }
+    }
+    .column3 {
+        margin-left:auto;
+    }
+    .description {
+        text-align: left;
+    }
+    .cover {
+        img {
+            width:100%;
+            max-width:480px;
+            margin:auto;
+            display:block;
+        }
+    }
+    .title {
+        font-weight:600;
+    }
+    .section-name {
+        color:$dark-byzantium;
+        margin:1.5rem 0;
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content:'';
+            width:100%;
+            max-width:600px;
+            position: absolute;
+            height:1px;
+            background-color: $dark-byzantium;
+            top:0;
+            bottom:0;
+            margin:auto 0 auto 1.5rem;
+            opacity:.5;
+        }
+    }
+    .authors {
+        .by {
+            color:var(--color-umber);
+        }
+        .author {
+            color:var(--color-umber);
+            &:hover {
+                color: var(--color-gold);
+            }
+        }
+    }
+    .formats {
+        margin:1rem 0;
+        color:var(--color-umber);
+    }
+    .card {
+        margin:0 auto 2em auto;
+        max-width:480px;
+        .card-header, .card-footer {
+            padding:.75rem;
+            background-color: var(--color-green);
+        }
+        .card-body {
+            padding:.75rem;
+            background-color: var(--color-light-green);
+        }
+    }
+    .btn {
+        background-color: var(--color-green);
+        color:var(--color-white);
+        &:hover {
+            background-color: var(--color-dark-green);
+        }
+    }
+    .prices {
+        .price {
+            margin-bottom:10px;
+            &:last-of-type {
+                margin:0;
+            }
+        }
+    }
+    .links {
+        a {
+            color:var(--color-gunmetal);
+        }
+    }
+}

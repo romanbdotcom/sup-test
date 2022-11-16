@@ -1,0 +1,46 @@
+// --------------------------------------------------
+// font size
+
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculate-rem($size);
+}
+
+%heading {
+  font-family: 'Lora', serif;
+}
+
+%main-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+// --------------------------------------------------
+// heading styles
+
+@mixin h1 {
+  @extend %heading;
+}
+
+@mixin h2 {
+  @extend %heading;
+}
+
+@mixin h3 {
+  @extend %heading;
+}
+
+@mixin h4 {
+  @extend %heading;
+}
+
+@mixin h5 {
+  @extend %heading;
+}
+
+@mixin h6 {
+  @extend %heading;
+}

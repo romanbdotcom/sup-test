@@ -1,0 +1,35 @@
+.burger-wrapper {
+    display: flex;
+    @media (min-width:768px) {
+        display:none;
+    }
+}
+.burger-button {
+	padding:0 1em;
+    cursor:pointer;
+    color:var(--color-white);
+	.icon {
+		position: relative;
+		height: 50px;
+		width: 50px;
+        .wrapper {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 26px;
+            cursor: pointer;
+            &:before,
+            &:after,
+            div {
+                background: var(--color-white);
+                content: "";
+                display: block;
+                height: 3px;
+                border-radius: 3px;
+                margin: 7px 0;
+                transition: 0.5s;
+            }
+        }
+	}
+}

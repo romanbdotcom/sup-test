@@ -1,0 +1,71 @@
+// reset nav
+nav {
+	ul {
+        padding:0;
+		li {
+			display: block;
+			a {
+				text-decoration: none;
+				display: block;
+			}
+		}
+	}
+}
+.main-nav {
+	background-color: var(--color-gunmetal);
+    padding:.75em 0;
+    a {
+        color:var(--color-white);
+        padding:1em 1.5em;
+        font-weight:600;
+    }
+    .main-menu {
+        flex-wrap:wrap;
+        max-width:800px;
+        margin:auto;
+        display:none;
+        li {
+            width:100%;
+            a {
+                text-align: center;
+            }
+            @media (min-width:360px) {
+                width:50%;
+            }
+            @media (min-width:512px) {
+                width:33%;
+            }
+        }
+        @media (min-width:768px) {
+           display:flex;
+           li {
+             width:auto;
+           }
+        }
+    }
+    li {
+        &.current-menu-item {
+            a {
+                color:var(--color-gold);
+            }
+        }
+    }
+    &.active {
+        .main-menu {
+            display:flex;
+        }
+        .burger-button {
+            .wrapper {
+                &:before {
+                    transform: translateY(12px) rotate(135deg);
+                }
+                &:after {
+                    transform: translateY(-12px) rotate(-135deg);
+                }
+                div {
+                    transform: scale(0);
+                }
+            }
+        }
+    }
+}

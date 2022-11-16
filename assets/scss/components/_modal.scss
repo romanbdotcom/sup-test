@@ -1,0 +1,26 @@
+.modal-bio {
+    position: absolute;
+    z-index: 10;
+    max-width:600px;
+    margin:auto;
+    width:100%;
+    background-color: var(--color-white);
+    border:1px solid var(--color-umber);
+    top:50%;
+    left:0;
+    right:0;
+    display:none;
+    &.open {
+        display:block;
+    }
+}
+.close-modal {
+    appearance: none;
+    border:0;
+    background-color: transparent;
+    display: table;
+    color:var(--color-umbra);
+    &:hover {
+        color:var(--color-gold);
+    }
+}
